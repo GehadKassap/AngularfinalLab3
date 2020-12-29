@@ -1,0 +1,17 @@
+<div class="mt-5 form-group">
+  <label for="gsearch" >Book Search:</label>
+  <input type="search" #item class="w-75 form-control" [(ngModel)]="currentVal" (input)="getBook()" id="gsearch" name="gsearch" >
+  <!-- <input type="submit" class="btn btn-info mt-2"> -->
+
+  <!--  (click)="getValue(item.value)" -->
+  <!-- <h1>{{currentVal}}</h1> -->
+</div>
+<div class="row">
+     <div class="col-md-4" *ngFor="let item of booksArray ">
+      <div class="book mt-5">
+        <h6 >{{item.volumeInfo.title }}</h6>
+
+     </div>
+
+  </div>
+</div>
